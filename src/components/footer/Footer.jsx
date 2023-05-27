@@ -15,10 +15,10 @@ export function Footer() {
         </Nav.Item>
       </Nav>
       <div className='d-flex justify-content-center gap-3 mt-3'>
-        <a href="#"><img src="/img/icons/facebook_icon.png" alt="Facebook" className="rsLogo"/></a>
-        <a href="#"><img src="/img/icons/instagram_icon.png" alt="Instagram" className="rsLogo"/></a>
-        <a href="#"><img src="/img/icons/linkedin_icon.png" alt="LinkedIn" className="rsLogo"/></a>
-        <a href="#"><img src="/img/icons/youtube_icon.png" alt="Youtuve" className="rsLogo"/></a>
+        <a href="#"><img src="img/icons/facebook_icon.png" alt="Facebook" className="rsLogo"/></a>
+        <a href="#"><img src="img/icons/instagram_icon.png" alt="Instagram" className="rsLogo"/></a>
+        <a href="#"><img src="img/icons/linkedin_icon.png" alt="LinkedIn" className="rsLogo"/></a>
+        <a href="#"><img src="img/icons/youtube_icon.png" alt="Youtuve" className="rsLogo"/></a>
       </div>
       <p className="text-center mt-4 mb-4 textCopy">Copyright - INDARG 2023</p>
     </>

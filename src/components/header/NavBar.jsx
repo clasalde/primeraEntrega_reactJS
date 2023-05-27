@@ -28,7 +28,7 @@ export function NavBar() {
           <div className='d-flex'>
             <button type="button" class="btn p-1" data-bs-toggle="modal"
               data-bs-target="#">
-              <img src="/img/icons/bag.svg" alt="Carrito" className='cartLogo' />
+              <img src="img/icons/bag.svg" alt="Carrito" className='cartLogo' />
             </button>
             <p>0</p>
           </div>
