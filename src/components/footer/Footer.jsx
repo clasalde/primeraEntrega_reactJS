@@ -3,39 +3,18 @@ import Nav from 'react-bootstrap/Nav';
 export function Footer() {
   return (
     <>
-      <Nav className="justify-content-center" activeKey="/home">
+      <Nav className="justify-content-center mt-2" activeKey="/home">
         <Nav.Item>
-          <Nav.Link href="/home">Active</Nav.Link>
+          <Nav.Link href="/home">HOME</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link eventKey="link-1">Link</Nav.Link>
+          <Nav.Link eventKey="link-1" href="#">POLITICA DE PRIVACIDAD</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link eventKey="link-2">Link</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link eventKey="disabled" disabled>
-            Disabled
-          </Nav.Link>
+          <Nav.Link eventKey="link-2" href="#">UBICACIÓN</Nav.Link>
         </Nav.Item>
       </Nav>
-      <p className="text-center mt-4 mb-4">Or right-aligned</p>
-      <Nav className="justify-content-end" activeKey="/home">
-        <Nav.Item>
-          <Nav.Link href="/home">Active</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link eventKey="link-1">Link</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link eventKey="link-2">Link</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link eventKey="disabled" disabled>
-            Disabled
-          </Nav.Link>
-        </Nav.Item>
-      </Nav>
+      <p className="text-center mt-4 mb-4">Copyright - INDARG 2023</p>
     </>
   );
 }

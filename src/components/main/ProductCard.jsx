@@ -1,22 +1,17 @@
+import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
 
 export function ProductCard({ img, product, desc, price }) {
   return (
-    <Row xs={1} md={2} className="g-3">
-      {Array.from({ length: 1 }).map((_, idx) => (
-        <Col key={idx}>
-          <Card>
-            <Card.Img variant="top" src={img} />
-            <Card.Body>
-              <Card.Title>{product}</Card.Title>
-              <Card.Text>{desc}</Card.Text>
-              <h4>Price: ${price}</h4>
-            </Card.Body>
-          </Card>
-        </Col>
-      ))}
-    </Row>
+    <Card style={{ width: '19rem' }}>
+      <Card.Img variant="top" src={img} className="m-auto"/>
+      <hr className='w-75 m-auto my-3'/>
+      <Card.Body className="d-flex flex-column justify-content-between text-center">
+        <Card.Title>{product}</Card.Title>
+        <Card.Text>{desc}</Card.Text>
+        <Card.Text>Precio: ${price}</Card.Text>
+        <Button variant="secondary">Comprar</Button>
+      </Card.Body>
+    </Card>
   );
 }

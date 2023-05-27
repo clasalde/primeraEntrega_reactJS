@@ -7,12 +7,12 @@ export function NavBar() {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand href="#" className="logoMain">INDARG</Navbar.Brand>
+        <Navbar.Brand href="/home" className="logoMain">INDARG</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#">NOSOTROS</Nav.Link>
-            <Nav.Link href="#">PRODUCTOS</Nav.Link>
+            <Nav.Link href="#nosotros">NOSOTROS</Nav.Link>
+            <Nav.Link href="#productos">PRODUCTOS</Nav.Link>
             <NavDropdown title="MAS" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">SERVICIOS</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
