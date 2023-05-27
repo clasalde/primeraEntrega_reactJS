@@ -5,16 +5,22 @@ export function Footer() {
     <>
       <Nav className="justify-content-center mt-2" activeKey="/home">
         <Nav.Item>
-          <Nav.Link href="/home">HOME</Nav.Link>
+          <Nav.Link className="textFooter" href="/home">HOME</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link eventKey="link-1" href="#">POLITICA DE PRIVACIDAD</Nav.Link>
+          <Nav.Link className="textFooter" eventKey="link-1" href="#">POLITICA DE PRIVACIDAD</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link eventKey="link-2" href="#">UBICACIÓN</Nav.Link>
+          <Nav.Link className="textFooter" eventKey="link-2" href="#">UBICACIÓN</Nav.Link>
         </Nav.Item>
       </Nav>
-      <p className="text-center mt-4 mb-4">Copyright - INDARG 2023</p>
+      <div className='d-flex justify-content-center gap-3 mt-3'>
+        <a href="#"><img src="/img/icons/facebook_icon.png" alt="Facebook" className="rsLogo"/></a>
+        <a href="#"><img src="/img/icons/instagram_icon.png" alt="Instagram" className="rsLogo"/></a>
+        <a href="#"><img src="/img/icons/linkedin_icon.png" alt="LinkedIn" className="rsLogo"/></a>
+        <a href="#"><img src="/img/icons/youtube_icon.png" alt="Youtuve" className="rsLogo"/></a>
+      </div>
+      <p className="text-center mt-4 mb-4 textCopy">Copyright - INDARG 2023</p>
     </>
   );
 }

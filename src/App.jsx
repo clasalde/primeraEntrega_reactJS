@@ -18,11 +18,11 @@ function App() {
         <section>
           <h2 className="text-center my-5 py-3" id="nosotros">SOBRE NOSOTROS</h2>
           <section className="container d-flex flex-wrap justify-content-center gap-3 mt-3">
-            <AboutUs img="/img/about_us/claudio_nosotros.webp" title="Claudio Lasalde" desc="Lic. en Administración, UADE" cta="LinkedIn" />
-            <AboutUs img="/img/about_us/guadalupe_nosotros.webp" title="Guadalupe Di Lorenzo" desc="Abogada, UBA" cta="LinkedIn" />
-            <AboutUs img="/img/about_us/gaston_nosotros.webp" title="Gastón Molina" desc="Ing. Industrial, UDeSA" cta="LinkedIn" />
-            <AboutUs img="/img/about_us/richard_nosotros.webp" title="Ricardo Di Fascio" desc="Ing. Sistemas, UTN" cta="LinkedIn" />
-            <AboutUs img="/img/about_us/sofia_nosotros.webp" title="Sofía Nascimbene" desc="Artista Plástica, USAL" cta="LinkedIn" />
+            <AboutUs img="/img/about_us/claudio_nosotros.webp" title="Claudio Lasalde" desc="Lic. en Administración, UADE" cta="#" />
+            <AboutUs img="/img/about_us/guadalupe_nosotros.webp" title="Guadalupe Di Lorenzo" desc="Abogada, UBA" cta="#" />
+            <AboutUs img="/img/about_us/gaston_nosotros.webp" title="Gastón Molina" desc="Ing. Industrial, UDeSA" cta="#" />
+            <AboutUs img="/img/about_us/richard_nosotros.webp" title="Ricardo Di Fascio" desc="Ing. Sistemas, UTN" cta="#" />
+            <AboutUs img="/img/about_us/sofia_nosotros.webp" title="Sofía Nascimbene" desc="Artista Plástica, USAL" cta="#" />
           </section>
         </section>
         {/* Productos */}
@@ -41,7 +41,7 @@ function App() {
         </section>
       </main>
 
-      <footer className="container-fluid bg-black py-2 mt-5">
+      <footer className="container-fluid bg-secondary py-2 mt-5">
         <Footer />
       </footer>
     </>

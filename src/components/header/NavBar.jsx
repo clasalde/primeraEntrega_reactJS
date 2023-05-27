@@ -25,6 +25,13 @@ export function NavBar() {
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
+          <div className='d-flex'>
+            <button type="button" class="btn p-1" data-bs-toggle="modal"
+              data-bs-target="#">
+              <img src="/img/icons/bag.svg" alt="Carrito" className='cartLogo' />
+            </button>
+            <p>0</p>
+          </div>
         </Navbar.Collapse>
       </Container>
     </Navbar>

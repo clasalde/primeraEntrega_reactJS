@@ -8,7 +8,8 @@ export function AboutUs({ img, title, desc, cta }) {
       <Card.Body className="d-flex flex-column justify-content-between text-center">
         <Card.Title>{title}</Card.Title>
         <Card.Text>{desc}</Card.Text>
-        <Button variant="primary">{cta}</Button>
+        <Button variant="primary">LinkedIn
+          <a href={cta}></a></Button>
       </Card.Body>
     </Card>
   );
