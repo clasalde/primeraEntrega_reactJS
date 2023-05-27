@@ -5,7 +5,7 @@ export function Footer() {
     <>
       <Nav className="justify-content-center mt-2" activeKey="/home">
         <Nav.Item>
-          <Nav.Link className="textFooter" href="/home">HOME</Nav.Link>
+          <Nav.Link className="textFooter" href="#">HOME</Nav.Link>
         </Nav.Item>
         <Nav.Item>
           <Nav.Link className="textFooter" eventKey="link-1" href="#">POLITICA DE PRIVACIDAD</Nav.Link>
