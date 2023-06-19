@@ -26,7 +26,7 @@ export function NavBar() {
             </NavDropdown>
           </Nav>
           <div className='d-flex'>
-            <button type="button" class="btn p-1" data-bs-toggle="modal"
+            <button type="button" className="btn p-1" data-bs-toggle="modal"
               data-bs-target="#">
               <img src="img/icons/bag.svg" alt="Carrito" className='cartLogo' />
             </button>

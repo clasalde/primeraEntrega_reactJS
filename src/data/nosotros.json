@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "nombre": "Claudio Lasalde",
+        "titulo": "Lic. en Adiministración",
+        "institucion": "UADE",
+        "linkedin": "https://www.linkedin.com/in/claudio-alejandro-lasalde-4036971b/",
+        "img": "img/about_us/claudio_nosotros.webp"
+    },
+    {
+        "id": 2,
+        "nombre": "Guadalupe Di Lorenzo",
+        "titulo": "Abogada",
+        "institucion": "UBA",
+        "linkedin": "https://www.linkedin.com/in/claudio-alejandro-lasalde-4036971b/",
+        "img": "img/about_us/guadalupe_nosotros.webp"
+    },
+    {
+        "id": 3,
+        "nombre": "Gastón Molina",
+        "titulo": "Ing. Industrial",
+        "institucion": "UdeSA",
+        "linkedin": "https://www.linkedin.com/in/claudio-alejandro-lasalde-4036971b/",
+        "img": "img/about_us/gaston_nosotros.webp"
+    },
+    {
+        "id": 4,
+        "nombre": "Ricardo Di Fascio",
+        "titulo": "Ing. en Sistemas",
+        "institucion": "UTN",
+        "linkedin": "https://www.linkedin.com/in/claudio-alejandro-lasalde-4036971b/",
+        "img": "img/about_us/richard_nosotros.webp"
+    },
+    {
+        "id": 5,
+        "nombre": "Sofía Nascimbene",
+        "titulo": "Artista Plástica",
+        "institucion": "USAL",
+        "linkedin": "https://www.linkedin.com/in/claudio-alejandro-lasalde-4036971b/",
+        "img": "img/about_us/sofia_nosotros.webp"
+    }
+]

@@ -1,7 +1,8 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
-export function ProductCard({ img, product, desc, price }) {
+const ItemCard = ({product, desc, img, price}) => {
+
   return (
     <Card style={{ width: '19rem' }}>
       <Card.Img variant="top" src={img} className="m-auto"/>
@@ -15,3 +16,5 @@ export function ProductCard({ img, product, desc, price }) {
     </Card>
   );
 }
+
+export default ItemCard
