@@ -1,21 +1,10 @@
-import { useState, useEffect } from "react"
-import { pedirDatosNosotros } from "../../../helpers/pedirDatosNosotros"
 import AboutUsList from "./AboutUsList"
+import { useNosotros } from "../../../hooks/useNosotros"
 
 
 const AboutUsListContainer = () => {
 
-    const [nosotros, setNosotros] = useState([])
-
-    useEffect(() => {
-        pedirDatosNosotros()
-            .then((res) => {
-                setNosotros(res)
-            })
-            .catch((error) => {
-                console.log(error)
-            })
-    }, [])
+    const { nosotros } = useNosotros()
 
     return (
         <div className="container my-5">

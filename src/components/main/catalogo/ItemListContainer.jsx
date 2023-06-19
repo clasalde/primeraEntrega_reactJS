@@ -1,21 +1,10 @@
-import { useState, useEffect } from "react"
-import { pedirDatosCatalogo } from "../../../helpers/pedirDatosCatalogo"
 import ItemList from "./ItemList"
+import { useProductos } from "../../../hooks/useProductos"
 
 
 const ItemListContainer = () => {
 
-    const [productos, setProductos] = useState([])
-
-    useEffect(() => {
-        pedirDatosCatalogo()
-            .then((res) => {
-                setProductos(res)
-            })
-            .catch((error) => {
-                console.log(error)
-            })
-    }, [])
+    const { productos } = useProductos()
 
     return (
         <div className="container my-5">
