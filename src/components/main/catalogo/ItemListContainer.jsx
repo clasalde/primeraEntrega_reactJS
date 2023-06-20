@@ -1,7 +1,6 @@
 import ItemList from "./ItemList"
 import { useProductos } from "../../../hooks/useProductos"
 
-
 const ItemListContainer = () => {
 
     const { productos } = useProductos()

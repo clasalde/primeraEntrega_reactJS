@@ -7,3 +7,14 @@
 .cartLogo {
     width: 30px;
 }
+
+.linkItems {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(36, 36, 36);
+    margin-left: 20px;
+    margin-right: 20px;
+    font-weight: 500;
+}

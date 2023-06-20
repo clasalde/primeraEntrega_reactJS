@@ -4,55 +4,63 @@
         "product": "Kamado Blanco",
         "desc": "Kamado pequeño ideal para el balcón",
         "img": "img/products/k01_kamado_blanco.webp",
-        "price": 585700
+        "price": 585700,
+        "categoria": "Kamados"
     },
     {
         "id": 2,
         "product": "Kamado Chico",
         "desc": "Kamado con patas diseñado especialmente para un trabajo cómodo y seguro a una altura media",
         "img": "img/products/k02_kamado_chico.webp",
-        "price": 478600
+        "price": 478600,
+        "categoria": "Kamados"
     },
     {
         "id": 3,
         "product": "Kamado Lateral",
         "desc": "Kamado con alas para simplificar la experiencia de cocina",
         "img": "img/products/k03_kamado_lateral.webp",
-        "price": 645000
+        "price": 645000,
+        "categoria": "Kamados"
     },
     {
         "id": 4,
         "product": "Kamado Luxury",
         "desc": "Diseño e innovación al servicio de la cocina de alto nivel",
         "img": "img/products/k04_kamado_luxury.webp",
-        "price": 1250000
+        "price": 1250000,
+        "categoria": "Kamados"
     },
     {
         "id": 5,
         "product": "Kamado Patas",
         "desc": "Práctico y liviano, nos permite optimizar los espacios",
         "img": "img/products/k05_kamado_patas.webp",
-        "price": 743000
+        "price": 743000,
+        "categoria": "Kamados"
     },
     {
         "id": 6,
         "product": "Kamado Rojo",
         "desc": "Ideal para un regalo especial",
         "img": "img/products/k06_kamado_rojo.webp",
-        "price": 695300
+        "price": 695300,
+        "categoria": "Kamados"
     },
     {
         "id": 7,
         "product": "Paellera Patas",
         "desc": "Disco de arado diseñado para parrillas y fogoneros",
         "img": "img/products/p1_paellera_patas.webp",
-        "price": 25300
+        "price": 25300,
+        "categoria": "Paelleras"
     },
     {
         "id": 8,
         "product": "Parrilla Mesa",
         "desc": "Parrilla para interiores extra resistente",
         "img": "img/products/p2_parrilla_mesa_carbon.webp",
-        "price": 4500
+        "price": 4500,
+        "categoria": "Parrillas"
     }
 ]
