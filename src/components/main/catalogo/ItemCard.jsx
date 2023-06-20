@@ -1,7 +1,7 @@
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
 
-const ItemCard = ({product, desc, img, price}) => {
+const ItemCard = ({id, product, desc, img, price}) => {
 
   return (
     <Card style={{ width: '19rem' }}>
@@ -11,7 +11,7 @@ const ItemCard = ({product, desc, img, price}) => {
         <Card.Title>{product}</Card.Title>
         <Card.Text>{desc}</Card.Text>
         <Card.Text>Precio: ${price}</Card.Text>
-        <Button variant="secondary">Comprar</Button>
+        <Link className='btn btn-secondary' to={`/primeraEntrega_reactJS/detail/${id}`}>Comprar</Link>
       </Card.Body>
     </Card>
   );

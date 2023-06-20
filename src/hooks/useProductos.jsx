@@ -6,19 +6,19 @@ export const useProductos = () => {
     
     const [productos, setProductos] = useState([])
     
-    const {categoriaId} = useParams() 
+    const {categoryId} = useParams() 
     
     useEffect(() => {
         pedirDatosCatalogo()
             .then((res) => {
-                if (!categoriaId) {
+                if (!categoryId) {
                     setProductos(res)
                 } else {
-                    setProductos(res.filter((item) => item.categoria === categoriaId))
+                    setProductos(res.filter((item) => item.category === categoryId))
                 }
             })
             .catch((error) => console.log(error))
-    }, [categoriaId])
+    }, [categoryId])
     
     return {
         productos
