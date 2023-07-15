@@ -4,6 +4,6 @@ export const pedirDatosCatalogo = () => {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(catalogo)
-        }, 2000)
+        }, 0)
     })
 }

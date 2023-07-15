@@ -4,6 +4,6 @@ export const pedirDatosNosotros = () => {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(nosotros)
-        }, 500)
+        }, 100)
     })
 }
