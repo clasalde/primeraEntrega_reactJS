@@ -18,7 +18,9 @@ export function NavBar() {
             <Link to="/primeraEntrega_reactJS/productos/Parrillas" className="linkItems">PARRILLAS</Link>
             <Link to="/primeraEntrega_reactJS/nosotros" className="linkItems">NOSOTROS</Link>
           </Nav>
+          <div>
             <CartWidget />
+          </div>
         </Navbar.Collapse>
       </Container>
     </Navbar>

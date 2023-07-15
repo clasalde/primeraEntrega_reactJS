@@ -17,9 +17,9 @@ const ItemCount = ({max, cantidad, setCantidad, handleAgregar}) => {
             <div className="d-flex justify-content-evenly my-1">
                 <p className="m-0 d-flex align-items-center">Seleccionar cantidad:</p>
                 <div>
-                    <button onClick={handleRestar} className="btn btn-outline-primary">-</button>
+                    <button onClick={handleRestar} className={cantidad === 1 ? "btn btn-outline-danger" : "btn btn-outline-primary"} disabled={cantidad === 1}>-</button>
                     <span className="mx-3">{cantidad}</span>
-                    <button onClick={handleSumar} className="btn btn-primary">+</button>
+                    <button onClick={handleSumar} className={cantidad === max ? "btn btn-outline-danger" : "btn btn-outline-primary"} disabled={cantidad === max}>+</button>
                 </div>
             </div>
             <div className="d-flex justify-content-center">

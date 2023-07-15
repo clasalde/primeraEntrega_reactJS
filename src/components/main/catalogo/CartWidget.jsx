@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { FaOpencart } from 'react-icons/fa';
 import { Link } from 'react-router-dom'
-import { CartContext } from '../../../Context/CartContext';
+import { CartContext } from '../../../context/CartContext';
 
 
 const CartWidget = () => {
