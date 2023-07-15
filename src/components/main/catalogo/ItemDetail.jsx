@@ -1,9 +1,12 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Card from 'react-bootstrap/Card';
 import ItemCount from './ItemCount';
 import ItemSize from "./ItemSize";
+import { CartContext } from "../../../Context/CartContext";
 
 const ItemDetail = ({ id, product, desc, img, price, category, descLarga, stock }) => {
+    
+    const { agregarAlCarrito } = useContext(CartContext)
     const [cantidad, setCantidad] = useState(1)
     const [size, setSize] = useState("M")
 
@@ -11,8 +14,9 @@ const ItemDetail = ({ id, product, desc, img, price, category, descLarga, stock 
       const item = {
         id, product, desc, img, price, category, descLarga, stock, cantidad, size
       }
-    }
 
+      agregarAlCarrito(item)
+    }
 
     return (
         <Card style={{ width: '19rem' }}>
@@ -35,7 +39,6 @@ const ItemDetail = ({ id, product, desc, img, price, category, descLarga, stock 
             cantidad={cantidad}
             setCantidad={setCantidad}
             handleAgregar={handleAgregar}
-
           />
         </Card>
       );

@@ -11,7 +11,7 @@ const ItemCard = ({id, product, desc, img, price}) => {
         <Card.Title>{product}</Card.Title>
         <Card.Text>{desc}</Card.Text>
         <Card.Text>Precio: ${price}</Card.Text>
-        <Link className='btn btn-secondary' to={`/primeraEntrega_reactJS/detail/${id}`}>Comprar</Link>
+        <Link className='btn btn-secondary' to={`/primeraEntrega_reactJS/detail/${id}`}>Detalle</Link>
       </Card.Body>
     </Card>
   );

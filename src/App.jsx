@@ -6,27 +6,32 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
 import ItemListContainer from "./components/main/catalogo/ItemListContainer"
 import AboutUsListContainer from "./components/main/about_us/AboutUsListContainer"
 import ItemDetailContainer from "./components/main/catalogo/ItemDetailContainer"
+import { CartContext } from "./Context/CartContext"
 
 function App() {
 
+  const [cart, setCart] = ([])
+
+  const agregarAlCarrito = (item) => {
+    setCart([...cart, item])
+  }
+
   return (
+    <CartContext.Provider value={{cart, agregarAlCarrito}}>
+      <BrowserRouter>
+        <NavBar />
 
-    <BrowserRouter>
+        <Routes>
+          <Route path="primeraEntrega_reactJS/" element={<ItemListContainer />} />
+          <Route path="primeraEntrega_reactJS/productos/:categoryId" element={<ItemListContainer />} />
+          <Route path="primeraEntrega_reactJS/detail/:itemId" element={<ItemDetailContainer />} />
+          <Route path="primeraEntrega_reactJS/nosotros" element={<AboutUsListContainer />} />
+          <Route path="*" element={<Navigate to={"primeraEntrega_reactJS/"}/>} />
+        </Routes>
 
-      <NavBar />
-
-      <Routes>
-        <Route path="primeraEntrega_reactJS/" element={<ItemListContainer />} />
-        <Route path="primeraEntrega_reactJS/productos/:categoryId" element={<ItemListContainer />} />
-        <Route path="primeraEntrega_reactJS/detail/:itemId" element={<ItemDetailContainer />} />
-        <Route path="primeraEntrega_reactJS/nosotros" element={<AboutUsListContainer />} />
-        <Route path="*" element={<Navigate to={"primeraEntrega_reactJS/"}/>} />
-      </Routes>
-
-      <Footer />
-              
-    </BrowserRouter>
-
+        <Footer />                
+      </BrowserRouter>
+    </CartContext.Provider>
   )
 }
 

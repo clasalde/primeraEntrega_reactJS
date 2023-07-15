@@ -5,7 +5,7 @@ const ItemSize = ({setSize}) => {
     }
 
     return (
-        <div className="d-flex justify-content-evenly my-3">
+        <div className="d-flex justify-content-evenly my-2">
             <p className="m-0 d-flex align-items-center">Seleccionar tamaño:</p>
             <select onChange={handleSize} className="btn btn-outline-primary">
                 <option value={"C"}>Chico</option>

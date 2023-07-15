@@ -27,7 +27,7 @@ const ItemDetailContainer = () => {
     return (
         <div className="container my-5">
             <ItemDetail {...item}/>
-            <Button onClick={volver} className="btn btn-secondary m-2">Volver</Button>
+            <Button onClick={volver} className="btn btn-secondary my-3">Volver a inicio</Button>
         </div>
     )
 }
