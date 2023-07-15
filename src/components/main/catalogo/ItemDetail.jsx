@@ -1,6 +1,18 @@
+import { useState } from "react";
 import Card from 'react-bootstrap/Card';
+import ItemCount from './ItemCount';
+import ItemSize from "./ItemSize";
 
-const ItemDetail = ({ id, product, desc, img, price, category, descLarga }) => {
+const ItemDetail = ({ id, product, desc, img, price, category, descLarga, stock }) => {
+    const [cantidad, setCantidad] = useState(1)
+    const [size, setSize] = useState("M")
+
+    const handleAgregar = () => {
+      const item = {
+        id, product, desc, img, price, category, descLarga, stock, cantidad, size
+      }
+    }
+
 
     return (
         <Card style={{ width: '19rem' }}>
@@ -10,9 +22,21 @@ const ItemDetail = ({ id, product, desc, img, price, category, descLarga }) => {
             <Card.Title>{product}</Card.Title>
             <Card.Text>{desc}</Card.Text>
             <Card.Text>{descLarga}</Card.Text>
-            <Card.Text>Precio: ${price}</Card.Text>
+            <Card.Text className="textBig">Precio: ${price}</Card.Text>
             <small>Categoría: {category}</small>
           </Card.Body>
+
+          <ItemSize
+            setSize={setSize}
+          />
+
+          <ItemCount
+            max={stock}
+            cantidad={cantidad}
+            setCantidad={setCantidad}
+            handleAgregar={handleAgregar}
+
+          />
         </Card>
       );
     }

@@ -6,7 +6,8 @@
         "img": "img/products/k01_kamado_blanco.webp",
         "price": 585700,
         "category": "Kamados",
-        "descLarga": "Esta es la descripción larga del producto 1. Esta descripción es la que visualizaremos en la navegación dentro de details"
+        "descLarga": "Esta es la descripción larga del producto 1. Esta descripción es la que visualizaremos en la navegación dentro de details",
+        "stock": 10
     },
     {
         "id": 2,
@@ -15,7 +16,8 @@
         "img": "img/products/k02_kamado_chico.webp",
         "price": 478600,
         "category": "Kamados",
-        "descLarga": "Esta es la descripción larga del producto 2. Esta descripción es la que visualizaremos en la navegación dentro de details"
+        "descLarga": "Esta es la descripción larga del producto 2. Esta descripción es la que visualizaremos en la navegación dentro de details",
+        "stock": 10
     },
     {
         "id": 3,
@@ -24,7 +26,8 @@
         "img": "img/products/k03_kamado_lateral.webp",
         "price": 645000,
         "category": "Kamados",
-        "descLarga": "Esta es la descripción larga del producto 3. Esta descripción es la que visualizaremos en la navegación dentro de details"
+        "descLarga": "Esta es la descripción larga del producto 3. Esta descripción es la que visualizaremos en la navegación dentro de details",
+        "stock": 10
     },
     {
         "id": 4,
@@ -33,7 +36,8 @@
         "img": "img/products/k04_kamado_luxury.webp",
         "price": 1250000,
         "category": "Kamados",
-        "descLarga": "Esta es la descripción larga del producto 4. Esta descripción es la que visualizaremos en la navegación dentro de details"
+        "descLarga": "Esta es la descripción larga del producto 4. Esta descripción es la que visualizaremos en la navegación dentro de details",
+        "stock": 10
     },
     {
         "id": 5,
@@ -42,7 +46,8 @@
         "img": "img/products/k05_kamado_patas.webp",
         "price": 743000,
         "category": "Kamados",
-        "descLarga": "Esta es la descripción larga del producto 5. Esta descripción es la que visualizaremos en la navegación dentro de details"
+        "descLarga": "Esta es la descripción larga del producto 5. Esta descripción es la que visualizaremos en la navegación dentro de details",
+        "stock": 10
     },
     {
         "id": 6,
@@ -51,7 +56,8 @@
         "img": "img/products/k06_kamado_rojo.webp",
         "price": 695300,
         "category": "Kamados",
-        "descLarga": "Esta es la descripción larga del producto 6. Esta descripción es la que visualizaremos en la navegación dentro de details"
+        "descLarga": "Esta es la descripción larga del producto 6. Esta descripción es la que visualizaremos en la navegación dentro de details",
+        "stock": 10
     },
     {
         "id": 7,
@@ -60,7 +66,8 @@
         "img": "img/products/p1_paellera_patas.webp",
         "price": 25300,
         "category": "Paelleras",
-        "descLarga": "Esta es la descripción larga del producto 7. Esta descripción es la que visualizaremos en la navegación dentro de details"
+        "descLarga": "Esta es la descripción larga del producto 7. Esta descripción es la que visualizaremos en la navegación dentro de details",
+        "stock": 10
     },
     {
         "id": 8,
@@ -69,6 +76,7 @@
         "img": "img/products/p2_parrilla_mesa_carbon.webp",
         "price": 4500,
         "category": "Parrillas",
-        "descLarga": "Esta es la descripción larga del producto 8. Esta descripción es la que visualizaremos en la navegación dentro de details"
+        "descLarga": "Esta es la descripción larga del producto 8. Esta descripción es la que visualizaremos en la navegación dentro de details",
+        "stock": 10
     }
 ]
