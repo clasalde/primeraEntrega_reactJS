@@ -17,7 +17,6 @@ export function NavBar() {
             <Link to="/primeraEntrega_reactJS/productos/Paelleras" className="linkItems">PAELLERAS</Link>
             <Link to="/primeraEntrega_reactJS/productos/Parrillas" className="linkItems">PARRILLAS</Link>
             <Link to="/primeraEntrega_reactJS/nosotros" className="linkItems">NOSOTROS</Link>
-            <Link to="/primeraEntrega_reactJS/contacto" className="linkItems">CONTACTO</Link>
           </Nav>
           <div className='d-flex'>
             <button type="button" className="btn p-1" data-bs-toggle="modal"
