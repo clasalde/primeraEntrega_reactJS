@@ -42,8 +42,8 @@ const Carrito = () => {
 
       <div className="productos container d-flex flex-wrap justify-content-center">
         {cart.map((prod) => (
-          <Card style={{ width: "19rem" }}>
-            <div key={prod.id}>
+          <Card key={prod.id} style={{ width: "19rem" }}>
+            <div>
               <h4 className="text-center my-2">{prod.product}</h4>
               <img src={prod.img} alt={prod.desc} className="d-flex m-auto" />
               <div className="d-flex flex-column align-items-center">
