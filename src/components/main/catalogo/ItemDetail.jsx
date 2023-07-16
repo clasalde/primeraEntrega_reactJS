@@ -37,7 +37,7 @@ const ItemDetail = ({ id, product, desc, img, price, category, descLarga, stock 
           {
             inCart(id)
               ? <div className="d-flex justify-content-center">
-                  <Link className="btn bg-black text-white my-2 w-75" to="primeraEntrega_reactJS/carrito">Finalizar Compra</Link>
+                  <Link to="../primeraEntrega_reactJS/carrito" className="btn bg-black text-white my-2 w-75">Finalizar Compra</Link>
                 </div>
               : <ItemCount
                   max={stock}
@@ -51,3 +51,5 @@ const ItemDetail = ({ id, product, desc, img, price, category, descLarga, stock 
     }
 
 export default ItemDetail
+
+{/* <Route path="*" element={<Navigate to={"primeraEntrega_reactJS/"} />} /> */}

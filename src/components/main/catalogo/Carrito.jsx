@@ -31,12 +31,15 @@ const Carrito = () => {
       <h3 className="textTotal">
         Total: $<strong>{totalCarrito()}</strong>
       </h3>
-      <button
-        onClick={vaciarCarrito}
-        className="btn btn-danger d-flex m-auto mb-3"
-      >
-        Vaciar Carrito
-      </button>
+      <div className="d-flex m-auto">
+        <button onClick={vaciarCarrito} className="btn btn-danger d-flex m-auto mb-3">
+          Vaciar Carrito
+        </button>
+        <Link to="/" className="btn btn-success d-flex m-auto mb-3">
+          Seguir Comprando
+        </Link>
+      </div>
+
       <div className="productos container d-flex flex-wrap justify-content-center">
         {cart.map((prod) => (
           <Card style={{ width: "19rem" }}>
