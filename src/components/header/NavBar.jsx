@@ -22,10 +22,10 @@ export function NavBar() {
               <Link to="/primeraEntrega_reactJS/productos/Paelleras" className="linkItems">PAELLERAS</Link>
               <Link to="/primeraEntrega_reactJS/productos/Parrillas" className="linkItems">PARRILLAS</Link>
               <Link to="/primeraEntrega_reactJS/nosotros" className="linkItems">NOSOTROS</Link>
-              <div>
+            </Nav>
+              <div className='d-flex justify-content-center my-3'>
                 <CartWidget />
               </div>
-            </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
