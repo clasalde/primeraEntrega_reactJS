@@ -31,11 +31,11 @@ const Carrito = () => {
       <h3 className="textTotal">
         Total: $<strong>{totalCarrito()}</strong>
       </h3>
-      <div className="d-flex m-auto">
+      <div className="container anchoBtnCarrito d-flex flex-wrap">
         <button onClick={vaciarCarrito} className="btn btn-danger d-flex m-auto mb-3">
           Vaciar Carrito
         </button>
-        <Link to="/" className="btn btn-secondary d-flex m-auto mb-3">
+        <Link to="/" className="btn btn-primary d-flex m-auto mb-3">
           Seguir Comprando
         </Link>
         <Link to="../primeraEntrega_reactJS/checkout" className="btn btn-success d-flex m-auto mb-3">

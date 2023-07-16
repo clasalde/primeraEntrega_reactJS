@@ -1,6 +1,8 @@
 import { NavBar } from "../components/header/NavBar";
 import { Footer } from "../components/footer/Footer";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../contexto/AuthContext";
 import ItemListContainer from "../components/main/catalogo/ItemListContainer";
 import AboutUsListContainer from "../components/main/about_us/AboutUsListContainer";
 import ItemDetailContainer from "../components/main/catalogo/ItemDetailContainer";
@@ -8,8 +10,6 @@ import Carrito from "../components/main/catalogo/Carrito";
 import Checkout from "../components/checkout/Checkout";
 import LoginScreen from "../components/auth/LoginScreen";
 import RegisterScreen from "../components/auth/RegisterScreen";
-import { useContext } from "react";
-import { AuthContext } from "../contexto/AuthContext";
 
 
 const AppRouter = () => {

@@ -8,6 +8,7 @@ import { db } from "../../../firebase/config.js";
 const ItemDetailContainer = () => {
 
     const [item, setItem] = useState(null)
+    
     const { itemId } = useParams()
 
     const navigate = useNavigate()
