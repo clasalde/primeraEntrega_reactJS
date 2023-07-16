@@ -25,38 +25,41 @@ const LoginScreen = () => {
 
     return (
         <div className="authContainer">
-        <div className="authModal">
-            <h4 className="logoMain">Login</h4>
-            <hr />
+            <div className="authModal">
+                <div className="loginContainer">
+                    <h4 className="textLogin">Login</h4>
+                    <img src="./img/icons/bandera_argentina2.png" className="banderaArgentina"/>
+                </div>
+                <hr />
 
-            <form onSubmit={handleSubmit}>
-                <input
-                    value={values.email}
-                    onChange={handleInputChange}
-                    type="email"
-                    placeholder="Email"
-                    className="form-control my-2"
-                    name="email"
-                    autoComplete="off"
-                />
-                <input
-                    value={values.password}
-                    onChange={handleInputChange}
-                    type="password"
-                    placeholder="Password"
-                    className="form-control my-2"
-                    name="password"
-                />
+                <form onSubmit={handleSubmit}>
+                    <input
+                        value={values.email}
+                        onChange={handleInputChange}
+                        type="email"
+                        placeholder="Email"
+                        className="form-control my-2"
+                        name="email"
+                        autoComplete="off"
+                    />
+                    <input
+                        value={values.password}
+                        onChange={handleInputChange}
+                        type="password"
+                        placeholder="Password"
+                        className="form-control my-2"
+                        name="password"
+                    />
 
-                <button className="btn btn-primary loginBtn" type="submit">
-                    Iniciar Sesión
-                </button>
-                <Link to="../primeraEntrega_reactJS/register">Registrarme</Link>
-            </form>
-            <button className="btn btn-primary loginBtn" onClick={googleLogin}>
-                Iniciar Sesión con Google
-            </button>
-        </div>
+                    <button className="btn btn-primary loginBtn" type="submit">
+                        Iniciar Sesión
+                    </button>
+                    <Link to="../primeraEntrega_reactJS/register">Registrarme</Link>
+                </form>
+                <Link className="d-flex justify-content-center">
+                    <img onClick={googleLogin} className="googleIcon" src="./img/icons/google_icon.png"/>
+                </Link>
+            </div>
         </div>
     );
 };

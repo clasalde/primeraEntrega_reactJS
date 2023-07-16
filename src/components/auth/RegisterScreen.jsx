@@ -27,7 +27,10 @@ const RegisterScreen = () => {
     return (
         <div className="authContainer">
         <div className="authModal">
-            <h4 className="logoMain">Registro</h4>
+            <div className="loginContainer">
+                <h4 className="textLogin">Nuevo Usuario</h4>
+                <img src="./img/icons/bandera_argentina2.png" className="banderaArgentina"/>
+            </div>
             <hr />
 
             <form onSubmit={handleSubmit}>
