@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./styles/styles.scss"
-import { AuthContextProvider } from "./context/AuthContext"
-import { CartProvider } from "./context/CartContext"
+import { AuthContextProvider } from "./contexto/AuthContext"
+import { CartProvider } from "./contexto/CartContext"
 import AppRouter from "./router/AppRouter"
 
 function App() {

@@ -4,7 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom'
 import CartWidget from '../main/catalogo/CartWidget';
 import { useContext } from 'react';
-import { AuthContext } from '../../context/AuthContext';
+import { AuthContext } from '../../contexto/AuthContext';
 
 export function NavBar() {
   const { user, logout } = useContext(AuthContext)

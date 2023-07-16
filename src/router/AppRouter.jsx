@@ -5,10 +5,11 @@ import ItemListContainer from "../components/main/catalogo/ItemListContainer";
 import AboutUsListContainer from "../components/main/about_us/AboutUsListContainer";
 import ItemDetailContainer from "../components/main/catalogo/ItemDetailContainer";
 import Carrito from "../components/main/catalogo/Carrito";
+import Checkout from "../components/checkout/Checkout";
 import LoginScreen from "../components/auth/LoginScreen";
 import RegisterScreen from "../components/auth/RegisterScreen";
 import { useContext } from "react";
-import { AuthContext } from "../context/AuthContext";
+import { AuthContext } from "../contexto/AuthContext";
 
 
 const AppRouter = () => {
@@ -27,6 +28,7 @@ const AppRouter = () => {
               <Route path="primeraEntrega_reactJS/detail/:itemId" element={<ItemDetailContainer />} />
               <Route path="primeraEntrega_reactJS/nosotros" element={<AboutUsListContainer />} />
               <Route path="primeraEntrega_reactJS/carrito" element={<Carrito />} />
+              <Route path="primeraEntrega_reactJS/checkout" element={<Checkout />} />
               <Route path="*" element={<Navigate to={"primeraEntrega_reactJS/"} />} />
             </Routes>
 

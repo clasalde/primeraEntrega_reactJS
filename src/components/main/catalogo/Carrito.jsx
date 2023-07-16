@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { CartContext } from "../../../Context/CartContext";
+import { CartContext } from "../../../contexto/CartContext";
 import Card from "react-bootstrap/Card";
 import { FaTrash } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -35,8 +35,11 @@ const Carrito = () => {
         <button onClick={vaciarCarrito} className="btn btn-danger d-flex m-auto mb-3">
           Vaciar Carrito
         </button>
-        <Link to="/" className="btn btn-success d-flex m-auto mb-3">
+        <Link to="/" className="btn btn-secondary d-flex m-auto mb-3">
           Seguir Comprando
+        </Link>
+        <Link to="../primeraEntrega_reactJS/checkout" className="btn btn-success d-flex m-auto mb-3">
+          CheckOut
         </Link>
       </div>
 
@@ -49,7 +52,6 @@ const Carrito = () => {
               <div className="d-flex flex-column align-items-center">
                 <p>Precio: ${prod.price}</p>
                 <p>Cantidad: {prod.cantidad}</p>
-                <p>Tamaño: {prod.size}</p>
               </div>
               <button
                 onClick={() => eliminarDelCarrito(prod.id)}
