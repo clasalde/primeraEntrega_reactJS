@@ -1,33 +1,17 @@
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./styles/styles.scss"
-import { NavBar } from "./components/header/NavBar"
-import { Footer } from "./components/footer/Footer"
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
-import ItemListContainer from "./components/main/catalogo/ItemListContainer"
-import AboutUsListContainer from "./components/main/about_us/AboutUsListContainer"
-import ItemDetailContainer from "./components/main/catalogo/ItemDetailContainer"
-import { CartProvider } from "./Context/CartContext"
-import Carrito from "./components/main/catalogo/Carrito"
+import { AuthContextProvider } from "./context/AuthContext"
+import { CartProvider } from "./context/CartContext"
+import AppRouter from "./router/AppRouter"
 
 function App() {
 
   return (
-    <CartProvider>
-      <BrowserRouter>
-        <NavBar />
-
-        <Routes>
-          <Route path="primeraEntrega_reactJS/" element={<ItemListContainer />} />
-          <Route path="primeraEntrega_reactJS/productos/:categoryId" element={<ItemListContainer />} />
-          <Route path="primeraEntrega_reactJS/detail/:itemId" element={<ItemDetailContainer />} />
-          <Route path="primeraEntrega_reactJS/nosotros" element={<AboutUsListContainer />} />
-          <Route path="primeraEntrega_reactJS/carrito" element={<Carrito />} />
-          <Route path="*" element={<Navigate to={"primeraEntrega_reactJS/"}/>} />
-        </Routes>
-
-        <Footer />                
-      </BrowserRouter>
-    </CartProvider>
+    <AuthContextProvider>
+      <CartProvider>
+        <AppRouter />
+      </CartProvider>
+    </AuthContextProvider>
   );
 };
 
