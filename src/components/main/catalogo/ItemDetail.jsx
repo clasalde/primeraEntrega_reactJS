@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import Card from 'react-bootstrap/Card';
 import ItemCount from './ItemCount';
 import { Link } from "react-router-dom";
@@ -8,6 +8,19 @@ const ItemDetail = ({ id, product, desc, img, price, category, descLarga, stock 
     
     const { agregarAlCarrito, inCart } = useContext(CartContext)
     const [cantidad, setCantidad] = useState(1)
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+      const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+      };
+      
+      window.addEventListener('resize', handleResize);
+
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    },[]);
 
     const handleAgregar = () => {
       const item = {
@@ -17,21 +30,18 @@ const ItemDetail = ({ id, product, desc, img, price, category, descLarga, stock 
     }
 
     return (
-        <Card style={{ width: '19rem' }}>
-          <Card.Img variant="top" src={img} className="m-auto"/>
-          <hr className='w-75 m-auto my-3'/>
-          <Card.Body className="d-flex flex-column justify-content-between text-center">
+        <Card className={`container d-flex ${windowWidth < 790 ? "flex-column" : "flex-row"}`}>
+          <Card.Img className="imgDetail" src={img} />
+          <Card.Body>
             <Card.Title>{product}</Card.Title>
             <Card.Text>{desc}</Card.Text>
             <Card.Text>{descLarga}</Card.Text>
             <Card.Text className="textBig">Precio: ${price}</Card.Text>
             <small>Categoría: {category}</small>
-          </Card.Body>
-
           {
             inCart(id)
-              ? <div className="d-flex justify-content-center">
-                  <Link to="../primeraEntrega_reactJS/carrito" className="btn bg-black text-white my-2 w-75">Ver Carrito</Link>
+              ? <div className="d-flex m-auto">
+                  <Link className="btn bg-black text-white my-2 w-75 m-auto text-center" to="../primeraEntrega_reactJS/carrito">Ver Carrito</Link>
                 </div>
               : <ItemCount
                   max={stock}
@@ -40,10 +50,9 @@ const ItemDetail = ({ id, product, desc, img, price, category, descLarga, stock 
                   handleAgregar={handleAgregar}
                 />
           }
+          </Card.Body>
         </Card>
       );
     }
 
 export default ItemDetail
-
-{/* <Route path="*" element={<Navigate to={"primeraEntrega_reactJS/"} />} /> */}
