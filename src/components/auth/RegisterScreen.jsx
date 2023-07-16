@@ -3,8 +3,9 @@ import { AuthContext } from "../../context/AuthContext";
 import { Link } from "react-router-dom";
 
 
-const LoginScreen = () => {
-    const { login, googleLogin } = useContext(AuthContext)
+
+const RegisterScreen = () => {
+    const { register } = useContext(AuthContext)
 
     const [values, setValues] = useState({
         email: '',
@@ -20,13 +21,13 @@ const LoginScreen = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        login(values)
+        register(values)
     };
 
     return (
         <div className="authContainer">
         <div className="authModal">
-            <h4 className="logoMain">Login</h4>
+            <h4 className="logoMain">Registro</h4>
             <hr />
 
             <form onSubmit={handleSubmit}>
@@ -49,16 +50,13 @@ const LoginScreen = () => {
                 />
 
                 <button className="btn btn-primary loginBtn" type="submit">
-                    Iniciar Sesión
+                    Registrarse
                 </button>
-                <Link to="../primeraEntrega_reactJS/register">Registrarme</Link>
+                <Link to="../primeraEntrega_reactJS/login">Ya estoy registrado</Link>
             </form>
-            <button className="btn btn-primary loginBtn" onClick={googleLogin}>
-                Iniciar Sesión con Google
-            </button>
         </div>
         </div>
     );
 };
 
-export default LoginScreen;
+export default RegisterScreen;

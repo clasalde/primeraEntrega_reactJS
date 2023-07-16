@@ -3,8 +3,12 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom'
 import CartWidget from '../main/catalogo/CartWidget';
+import { useContext } from 'react';
+import { AuthContext } from '../../context/AuthContext';
 
 export function NavBar() {
+  const { user, logout } = useContext(AuthContext)
+
   return (
     <Navbar className="container-fluid sticky-top p-0" bg="light" expand="lg">
       <Container>
@@ -23,6 +27,8 @@ export function NavBar() {
           </div>
         </Navbar.Collapse>
       </Container>
+      <p>Bienvenido: {user.email}</p>
+      <button className='btn btn-danger' onClick={logout}>Logout</button>
     </Navbar>
   );
 }

@@ -6,6 +6,7 @@ import AboutUsListContainer from "../components/main/about_us/AboutUsListContain
 import ItemDetailContainer from "../components/main/catalogo/ItemDetailContainer";
 import Carrito from "../components/main/catalogo/Carrito";
 import LoginScreen from "../components/auth/LoginScreen";
+import RegisterScreen from "../components/auth/RegisterScreen";
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 
@@ -15,50 +16,28 @@ const AppRouter = () => {
 
   return (
     <BrowserRouter>
-      {user.logged ? (
-        <>
-          <NavBar />
+      {
+        user.logged
+        ? <>
+            <NavBar />
 
-          <Routes>
-            <Route
-              path="primeraEntrega_reactJS/"
-              element={<ItemListContainer />}
-            />
-            <Route
-              path="primeraEntrega_reactJS/productos/:categoryId"
-              element={<ItemListContainer />}
-            />
-            <Route
-              path="primeraEntrega_reactJS/detail/:itemId"
-              element={<ItemDetailContainer />}
-            />
-            <Route
-              path="primeraEntrega_reactJS/nosotros"
-              element={<AboutUsListContainer />}
-            />
-            <Route
-              path="primeraEntrega_reactJS/carrito"
-              element={<Carrito />}
-            />
-            <Route
-              path="*"
-              element={<Navigate to={"primeraEntrega_reactJS/"} />}
-            />
+            <Routes>
+              <Route path="primeraEntrega_reactJS/" element={<ItemListContainer />} />
+              <Route path="primeraEntrega_reactJS/productos/:categoryId" element={<ItemListContainer />} />
+              <Route path="primeraEntrega_reactJS/detail/:itemId" element={<ItemDetailContainer />} />
+              <Route path="primeraEntrega_reactJS/nosotros" element={<AboutUsListContainer />} />
+              <Route path="primeraEntrega_reactJS/carrito" element={<Carrito />} />
+              <Route path="*" element={<Navigate to={"primeraEntrega_reactJS/"} />} />
+            </Routes>
+
+            <Footer />
+          </>
+        : <Routes>
+            <Route path="primeraEntrega_reactJS/login" element={<LoginScreen />} />
+            <Route path="primeraEntrega_reactJS/register" element={<RegisterScreen />} />
+            <Route path="*" element={<Navigate to="primeraEntrega_reactJS/login" />} />
           </Routes>
-          <Footer />
-        </>
-      ) : (
-        <Routes>
-          <Route
-            path="primeraEntrega_reactJS/login"
-            element={<LoginScreen />}
-          />
-          <Route
-            path="*"
-            element={<Navigate to="primeraEntrega_reactJS/login" />}
-          />
-        </Routes>
-      )}
+      }
     </BrowserRouter>
   );
 };
