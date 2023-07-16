@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
-import { pedirDatosCatalogo } from "../../../helpers/pedirDatosCatalogo";
 import { useParams, useNavigate } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
 import { Button } from "react-bootstrap"
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../../../firebase/config.js";
 
 const ItemDetailContainer = () => {
 
@@ -17,11 +18,12 @@ const ItemDetailContainer = () => {
    
     
     useEffect(() => {
-        pedirDatosCatalogo()
-        .then((res) => {
-            setItem(res.find((prod) => prod.id === Number(itemId)))
-        })
-        .catch((error) => console.log(error))
+        const itemRef = doc(db, "productos", itemId)
+        getDoc(itemRef)
+            .then((doc) => {
+                setItem({...doc.data(), id: doc.id})
+            })
+            .catch(e => console.log(e))
     }, [itemId])
 
     return (
